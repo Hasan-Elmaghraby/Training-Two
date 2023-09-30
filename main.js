@@ -32,12 +32,60 @@ close.addEventListener("click", function close() {
     overLay.style.display ="none"
 })
 window.onclick = function (e) {
-    if (e.target == overLay) {
-        overLay.style.display ="none"
-        magaMenu.style.opacity = "0";
-    }
+  if (e.target == overLay) {
+    overLay.style.display = "none"
+    magaMenu.style.opacity = "0";
+  }
 }
-//End MegaMenu
+  //End MegaMenu
+
+// Start Slider
+let slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("image-slide");
+  let bullets = document.querySelectorAll(".bullet li");
+  console.log(slides)
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < bullets.length; i++) {
+    bullets[i].className = bullets[i].className.replace("active-bullets", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  bullets[slideIndex - 1].className += " active-bullets";
+}
+// End Slider
+  
+// Start log out
+// let logout = document.querySelector("#log-out")
+// let popupLogout = document.querySelector(".logout")  
+// let cancel = document.querySelector(".cancel")  
+// logout.addEventListener("click", function display() {
+//   popupLogout.style.display = "block"
+// })
+// cancel.addEventListener("click", function () {
+//   popupLogout.style.display = "none"
+// })
+// window.addEventListener("click", function (e) {
+//   if (e.target == overLay) {
+//     popupLogout.style.display = "none"
+//   }
+// })
+// End log out
 // End Header Actions
 // Start Active Button
 const dropdownBtn = document.getElementById("btn");
@@ -90,8 +138,8 @@ window.addEventListener('scroll', function () {
   }
   else {
     headerElement.classList.remove("sticky");
-    document.body.style.marginTop = "0"
-  }
+    document.body.style.marginTop="0"
+}
 })
 // End sticky Header
 
@@ -103,8 +151,9 @@ for (let i = 0; i < time.length; i++) {
   const timeTarregt = time[i];
   timeTarregt.append(currentTime)
 }
-
 //End Making time to conversation
+
+// Start test
 
 // Start Sub Button
 const subdropdownBtn = document.getElementById("sub-btn");

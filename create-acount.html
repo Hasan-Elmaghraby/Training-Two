@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;800&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/main.css">
+</head>
+<body>
+<div class="create-acount">
+       <!-- Start Connect Us -->
+    <div class="connect-us">
+        <div class="container">
+            <div class="row">
+                <div class="info">
+                    <div class="title">
+                          <span class="close" id="close"><i class="fa-regular fa-circle-xmark fa-2x"></i></span>
+                        <h3>إنشاء حساب جديد</h3>
+                        <p>من فضلك قم بإدخال بياناتك لإنشاء حساب جديد</p>
+                    </div>
+                    <form class="form" action="">
+                        <label for="name">الإسم</label> 
+                        <input type="text" id="name" placeholder="قم بإدخال الإسم" required>
+                        <label for="mail">البريد الإلكتروني</label> 
+                        <input type="email"  id="mail" placeholder="قم بإدخال الإيميل الاكتروني" required>
+                        <label for="phone">رقم الجوال</label>
+                        <input type="tel" id="phone" placeholder="قم بإدخال رقم الجوال" required> 
+                        <label for="password">كلمة المرور</label>
+                        <input type="password" name="" id="password" placeholder="أدخل كلمة السر" maxlength="6" required>
+                        <label for="password-confirm">تأكيد كلمة المرور </label>
+                        <input type="password" name="" id="password-confirm" placeholder="أدخل كلمة السر"maxlength="6"  required>
+                        <div class="checkbox">
+                            <input type="checkbox" name="" id="check">
+                            <label for="check">بالتسجيل للدخول فأنت توافق علي <span></span>الشروط والأحكام</label>
+                        </div>
+                        <input type="submit" value="إنشاء حساب جديد">
+                        <input  class="submit" type="submit" value="تسجيل دخول">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Connect Us -->
+</div>
+<script src="main.js"></script>
+</body>
+</html>

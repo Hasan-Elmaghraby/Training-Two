@@ -44,33 +44,49 @@
                             <i class="fa-solid fa-book"></i>
                          استشاراتي
                         </a>
-                        <a href="#logout">
+                        <a id="log-out"  href="#logout">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                          تسجيل الخروج
                         </a>
                       </div>
+                 
                     </div>
-                <a class="notifications" id="notifications" href=""><i class="fa-solid fa-bell fa-2x bell"></i></a>
+                <a class="notifications" id="notifications" href=""> <span>10</span><i class="fa-solid fa-bell fa-2x bell"></i></a>
             </div>           
         </div>
     </div>
-        <div class="main-image"><img src="imgs/Themain.png" style="width: 100%;" alt="">
-            <div class="text">
+       <div class="logout">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <h3>تسجيل الخروج</h3>
+            <p>هل أنت متأكد بأنك تريد تسجيل الخروج</p>
+            <div class="box">
+            <button class="exit">خروج</button>
+            <button class="cancel">إلغاء</button>
+            </div>
+        </div>
+        <div class="main-image ">
+        <div class="image-slide fade"><img src="imgs/Themain.png" style="width: 100%;" alt=""></div>
+        <div class="image-slide fade"><img src="imgs/meeting-1.jpg" style="width: 100%;" alt=""></div>
+        <div class="image-slide fade"><img src="imgs/meeting-2.webp" style="width: 100%;" alt=""></div>
+        <div class="image-slide fade"><img src="imgs/meeting-3.jpeg" style="width: 100%;" alt=""></div>
+        <div class="image-slide fade"><img src="imgs/meeting-4.jpg" style="width: 100%;" alt=""></div>
+        <div class="image-slide fade"><img src="imgs/meeting-5.jpeg" style="width: 100%;" alt=""></div>
+       <div class="text">
                 <h3>تورق <span>للاستشارات </span>الماليه</h3>
                 <p>حدوث العديد من التطورات السريعة  في مجال المال و الأعمال ، يؤدي الي ضرورة محاولة الشركات والمؤسسات أن تواكب تلك التطورات المتلاحقة بشكل علمي متقن ومتطور </p>
                 <div class="slide">
-                    <i class="fa-solid fa-angle-right slide-right"></i>
-                    <i class="fa-solid fa-angle-left slide-left"></i>
+                    <i class="fa-solid fa-angle-right slide-right" onclick="plusSlides(-1)"></i>
+                    <i class="fa-solid fa-angle-left slide-left" onclick="plusSlides(1)"></i>
                 </div>
             <ul class="bullet">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li onclick="currentSlide(1)"></li>
+                <li onclick="currentSlide(2)"></li>
+                <li onclick="currentSlide(3)"></li>
+                <li onclick="currentSlide(4)"></li>
+                <li onclick="currentSlide(5)"></li>
+                <li onclick="currentSlide(6)"></li>
             </ul>
-            </div>
+        </div>
         </div>
         <div id="myOverlay" class="overlay"></div>
     </div>

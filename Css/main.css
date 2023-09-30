@@ -112,6 +112,65 @@
   transition: 0.5s ease;
 }
 /* End Active button */
+/* Start log out */
+    .logout {
+      width: 40%;
+      position: absolute;
+      background-color: white;
+      z-index: 1111;
+      text-align: center;
+      padding: 40px 65px;
+      top: 16%;
+      left: 25%;
+      border-radius: 4px;
+      display: none;
+    }
+  
+    .logout i {
+      font-size: 50px;
+      color: red;
+    }
+  
+    .logout i,
+    .logout h3,
+    .logout p {
+      padding-bottom: 20px;
+    }
+  
+    .logout .box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .logout button {
+      padding: 10px 0;
+      border-radius: 4px;
+      border: none;
+      font-size: 18px;
+      transition: var(--long-transition);
+    }
+  
+    .logout .exit {
+      background-color: red;
+      color: white;
+    }
+  
+    .logout .cancel {
+      border: 1px solid red;
+      color: red;
+      background-color: transparent;
+    }
+    .logout .cancel:hover {
+    background-color: red;
+      color: white;
+    }
+    .logout :has(.cancel:hover) .exit {
+      border: 1px solid red;
+        color: red;
+        background-color: transparent;
+    }
+/* End log out */
 
 /* Start more button */
 
@@ -290,7 +349,7 @@
   color: white;
 }
 
-.header .notifications::before{
+.header .notifications span{
   position: absolute;
   content: "10";
   color: white;
@@ -349,6 +408,35 @@ color: var(--main-color);
 .header .main-image .text p{
 font-size: 20px;
 }
+ /* Hide the images by default */
+ .image-slide {
+   display: none;
+ }
+
+ /* The dots/bullets/indicators */
+ .bullet li {
+   transition: background-color 0.6s ease;
+ }
+
+ /* Fading animation */
+ .fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+ }
+
+ @keyframes fade {
+   from {
+     opacity: .4
+   }
+
+   to {
+     opacity: 1
+   }
+ }
+
+ .main-image img {
+   height: 366px;
+ }
 .header .slide {
   display: flex;
   justify-content: center;
@@ -373,10 +461,9 @@ font-size: 20px;
   width: 10px;
   height: 10px;
   border: 1px solid;
-  background-color: transparent;
   border-radius: 50%;
 }
-.header .bullet li:nth-of-type(3){
+ .active-bullets{
   background-color:var(--main-color) ;
 }
 .close{
@@ -465,6 +552,17 @@ font-size: 20px;
   }
   
 @media (max-width:991px) {
+  .header .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+        .header .nav-box .nav {
+          font-size: 25px;
+          padding: 8px;
+        }
+    .header .logo img{
+      width: 110px;
+    }
   .header .main-image .text h3 {
     font-size: 35px;
 }
@@ -971,7 +1069,7 @@ text-align: center;
 .footer li,
 .footer a
 {
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .footer .links ul li,
@@ -1017,7 +1115,8 @@ transition: var(--short-transition);
   position: absolute;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  right: -32px;
+  right: -45px;
+  top:20%;
   padding: 10px;
   color: var(--main-color);
   background-color: var(--white-color);
@@ -1026,11 +1125,11 @@ transition: var(--short-transition);
 }
 .footer .contact .phone::before{
   content: "\f2a0";
-  top:5px;
+
 }
 .footer .contact .mail::after{
   content: "\f0e0";
-  top: 15px;
+  
 }
 .footer .contact .mail:hover,
 .footer .contact .phone:hover{
@@ -1058,6 +1157,9 @@ transition: var(--short-transition);
   .footer::after{
     display: none;
   }
+    .footer .container .info{
+      gap:40px;
+    }
 }
 
 /* End Footer */
@@ -1495,3 +1597,97 @@ padding-bottom: 15px;
 }
   
   /* End Terms and conditions page */
+  /* Start Create Profile */
+  .create-acount{
+        width: 40%;
+        margin: auto;
+        background-color: #FFFFFF;
+  }
+
+  .create-acount .info .title{
+    text-align: center;
+  }
+  .create-acount .connect-us{
+background-image: none;
+  }
+
+    .create-acount .title {
+      position: relative;
+    }
+  
+    .create-acount .close {
+      padding: 10px;
+      color: red;
+      position: absolute;
+      top: 0;
+      display: block;
+      right: -17px;
+    }
+  
+    .create-acount .close i {
+      transition: var(--short-transition);
+    }
+  
+    .create-acount .close i:hover {
+      color: var(--main-color);
+    }
+  .create-acount .checkbox{
+          display: flex;
+          padding-top: 15px;
+  }
+  .create-acount .checkbox input{
+            appearance: none;
+              border: none;
+              background: none;
+          width: 20px; 
+  }
+ 
+  .create-acount .checkbox label{
+          position: relative;
+  }
+    .create-acount .checkbox label::before{
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #E5E5E5;
+      margin-top: -9px;
+      border-radius: 4px;
+    }
+
+ .create-acount input[type="checkbox"]:checked+label::after {
+   transform: scale(1);
+ }
+  .create-acount .checkbox label::after{
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  position: absolute;
+  font-weight: 900;
+  right: -20px;
+  top: 50%;
+  margin-top: -9px;
+  background-color: var(--main-color);
+  color: white;
+   width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+}
+.create-acount .connect-us .form .submit{
+  background-color: var(--white-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.create-acount a{
+  text-align: left;
+  color: var(--main-color);
+}
+  /* End Create Profile */
+
+   
