@@ -56,7 +56,6 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("image-slide");
   let bullets = document.querySelectorAll(".bullet li");
-  console.log(slides)
   if (n > slides.length) { slideIndex = 1 }
   if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
@@ -165,7 +164,7 @@ const subtoggleDropdown = function () {
     subtoggleArrow.classList.toggle("arrow");
   };
 
-  subdropdownBtn.addEventListener("click", function (ele) {
+ subdropdownBtn.addEventListener("click", function (ele) {
     ele.stopPropagation();
     subtoggleDropdown();
   });
